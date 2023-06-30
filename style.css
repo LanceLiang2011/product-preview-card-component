@@ -164,6 +164,7 @@ h6 {
   .item {
     min-height: 240px;
     background-position: center;
+    background-image: url("./images/image-product-mobile.jpg");
   }
 
   .detail {
