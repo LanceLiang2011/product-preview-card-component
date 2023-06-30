@@ -1,0 +1,192 @@
+/* CSS variables */
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  background: var(--cream);
+}
+/*
+  4. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Fraunces", serif;
+}
+
+.card {
+  height: 450px;
+  width: 600px;
+  background: var(--white);
+  margin: 175px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+}
+
+.item {
+  flex: 1;
+  background-image: url("./images/image-product-desktop.jpg");
+  background-size: cover;
+}
+.detail {
+  flex: 1;
+  text-align: left;
+  padding: 32px;
+}
+
+.intro {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 5px;
+  color: var(--dark-grayish-blue);
+  margin-bottom: 20px;
+}
+
+.name {
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 1;
+  color: var(--very-dark-blue);
+  margin-bottom: 23px;
+  max-width: 245px;
+}
+
+.description {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0px;
+  line-height: 1.438rem;
+  color: var(--dark-grayish-blue);
+  margin-bottom: 27px;
+  max-width: 245px;
+}
+
+.price {
+  display: flex;
+  gap: 19px;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.price > span::before {
+  content: "$";
+}
+
+.price-new {
+  font-family: "Fraunces", serif;
+  color: var(--dark-cyan);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.price-old {
+  color: var(--dark-grayish-blue);
+  font-size: 0.8125rem;
+  text-decoration: line-through;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 236px;
+  padding: 15px 62px;
+
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  background: var(--dark-cyan);
+  border: none;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  background: #1a4032;
+}
+
+@media (max-width: 620px) {
+  .card {
+    height: 611px;
+    width: 343px;
+    background: var(--white);
+    margin: 175px auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item {
+    min-height: 240px;
+    background-position: center;
+  }
+
+  .detail {
+    padding: 24px;
+  }
+
+  .intro {
+    margin-bottom: 12px;
+  }
+
+  .name {
+    margin-bottom: 16px;
+    max-width: fit-content;
+  }
+
+  .description {
+    margin-bottom: 23px;
+    max-width: fit-content;
+  }
+
+  .price {
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
