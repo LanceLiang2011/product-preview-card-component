@@ -68,6 +68,7 @@ h6 {
   flex: 1;
   background-image: url("./images/image-product-desktop.jpg");
   background-size: cover;
+  min-width: 300px;
 }
 .detail {
   flex: 1;
